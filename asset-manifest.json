@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/frontendmentor/static/css/main.a8aaa22a.css",
-    "main.js": "/frontendmentor/static/js/main.74842400.js",
+    "main.css": "/frontendmentor/static/css/main.0e658c2c.css",
+    "main.js": "/frontendmentor/static/js/main.b560ea03.js",
     "static/js/787.bff67265.chunk.js": "/frontendmentor/static/js/787.bff67265.chunk.js",
     "static/media/logo.svg": "/frontendmentor/static/media/logo.6ce24c58023cc2f8fd88.svg",
+    "static/media/icon-memory.svg": "/frontendmentor/static/media/icon-memory.22a9e0501e58960f3c349cd96fcf108f.svg",
     "index.html": "/frontendmentor/index.html",
-    "main.a8aaa22a.css.map": "/frontendmentor/static/css/main.a8aaa22a.css.map",
-    "main.74842400.js.map": "/frontendmentor/static/js/main.74842400.js.map",
+    "static/media/icon-visual.svg": "/frontendmentor/static/media/icon-visual.61fc2697d5094b6e396276b1a1597c86.svg",
+    "static/media/icon-verbal.svg": "/frontendmentor/static/media/icon-verbal.cc1204a0b0559da591a3ea6e99c5cf50.svg",
+    "static/media/icon-reaction.svg": "/frontendmentor/static/media/icon-reaction.0c1d6b98b4559ba72276d9ceda14692d.svg",
+    "main.0e658c2c.css.map": "/frontendmentor/static/css/main.0e658c2c.css.map",
+    "main.b560ea03.js.map": "/frontendmentor/static/js/main.b560ea03.js.map",
     "787.bff67265.chunk.js.map": "/frontendmentor/static/js/787.bff67265.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8aaa22a.css",
-    "static/js/main.74842400.js"
+    "static/css/main.0e658c2c.css",
+    "static/js/main.b560ea03.js"
   ]
 }
