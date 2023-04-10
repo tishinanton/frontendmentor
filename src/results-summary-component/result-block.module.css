@@ -1,0 +1,85 @@
+.block {
+  background: linear-gradient(180deg, #7755ff 0%, #6943ff 0.01%, #2f2ce9 100%);
+  padding: 38px 54px 46px 54px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.blockMobile {
+  width: 100%;
+  max-height: min-content;
+}
+
+.blockDesktop {
+  width: 368px;
+  border-radius: 32px;
+}
+
+.blockTitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #cac9ff;
+}
+
+.blockDesktop .blockTitle {
+  margin-bottom: 35px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.blockDesktop .score {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(
+    180deg,
+    #4d21c9 0%,
+    rgba(37, 33, 201, 0) 100%,
+    rgba(37, 33, 201, 0) 100%
+  );
+  margin-bottom: 28px;
+}
+
+.blockDesktop .scoreFont {
+  font-weight: 800;
+  font-size: 72px;
+  color: #ffffff;
+}
+
+.blockDesktop .scoreOutOfFont {
+  font-weight: 700;
+  font-size: 18px;
+  color: #cac9ff;
+  mix-blend-mode: normal;
+  opacity: 0.52;
+}
+
+.resultDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blockDesktop .resultDescription .performance {
+  font-weight: 700;
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.blockDesktop .resultDescription .description {
+  font-weight: 500;
+  font-size: 18px;
+  color: #cac9ff;
+  text-align: center;
+}

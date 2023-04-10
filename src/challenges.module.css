@@ -1,0 +1,9 @@
+.challenges {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.challenges a {
+  color: hsl(200, 100%, 50%);
+}
