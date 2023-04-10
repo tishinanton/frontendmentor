@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteObject, createBrowserRouter } from "react-router-dom";
+import { RouteObject, createHashRouter } from "react-router-dom";
 import { Challenges } from "./challenges-component";
 import { CHALLENGES } from "./challenges";
 
@@ -14,13 +14,14 @@ const challengesRoutes = CHALLENGES.map((c): RouteObject => {
 
 console.log(challengesRoutes);
 
-export const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <Challenges />,
-    },
-    ...challengesRoutes,
-  ],
-  { basename: "/frontendmentor" }
-);
+export const router = createHashRouter([
+  {
+    path: "/",
+    element: <Challenges />,
+  },
+  ...challengesRoutes,
+  {
+    path: "*",
+    element: <>Not found</>,
+  },
+]);
