@@ -1,0 +1,29 @@
+.form {
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  border-radius: 30px;
+}
+
+.mobile {
+  padding: 24px 24px 32px 24px;
+}
+
+.desktop {
+  padding: 32px;
+  max-width: min-content;
+}
+
+.scores {
+  display: flex;
+}
+
+.mobile .scores {
+  gap: 18px;
+}
+
+.desktop .scores {
+  gap: 21px;
+}

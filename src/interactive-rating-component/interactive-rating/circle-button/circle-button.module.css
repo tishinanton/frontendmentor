@@ -1,0 +1,39 @@
+.button {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-family: "Overpass";
+  font-weight: 700;
+  color: #7c8798;
+  background: #262e38;
+  border-radius: 50%;
+  border: none;
+}
+
+.button img {
+  align-self: center;
+}
+
+.hoverable {
+  cursor: pointer;
+}
+
+.hoverable:hover,
+.hoverable:active {
+  background: #fc7614;
+  color: #ffffff;
+}
+
+.active {
+  background: #7c8798;
+  color: #ffffff;
+}
+
+.button.mobile {
+  font-size: 14px;
+}
+
+.button.desktop {
+  font-size: 16px;
+  line-height: 24px;
+}

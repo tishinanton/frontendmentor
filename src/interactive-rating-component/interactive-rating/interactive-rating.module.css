@@ -1,0 +1,11 @@
+.rating {
+  
+}
+
+.rating.mobile {
+    padding: 24px 24px 32px 24px;
+}
+
+.rating.desktop {
+    padding: 32px;  
+}

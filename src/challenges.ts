@@ -9,4 +9,8 @@ export const CHALLENGES: Challenge[] = [
     name: "Product preview card component",
     url: "product-preview-card-component",
   },
+  {
+    name: "Interactive rating component",
+    url: "interactive-rating-component",
+  },
 ];
