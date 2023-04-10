@@ -7,13 +7,10 @@ export const ResultBlock = () => {
 
   const blockClasses = [
     styles.block,
-    isMobile ? styles.blockMobile : styles.blockDesktop,
+    isMobile ? styles.mobile : styles.desktop,
   ];
 
-  const scoreClasses = [
-    styles.score,
-    isMobile ? styles.scoreMobile : styles.scoreDesktop,
-  ];
+  const scoreClasses = [styles.score];
 
   return (
     <div className={blockClasses.join(" ")}>

@@ -1,0 +1,88 @@
+.wrapper {
+  display: flex;
+  padding: 16px;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.info {
+  display: flex;
+  gap: 12px;
+}
+
+.red {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    #ff5555;
+}
+
+.red .name {
+  color: #ff5555;
+}
+
+.yellow {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    #ffb21e;
+}
+
+.yellow .name {
+  color: #ffb21e;
+}
+
+.green {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    #00bb8f;
+}
+
+.green .name {
+  color: #00bb8f;
+}
+
+.blue {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    #1125d6;
+}
+
+.blue .name {
+  color: #1125d6;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.score {
+  font-weight: 700;
+  color: #303b59;
+}
+
+.desktop .name,
+.desktop .score {
+  font-size: 18px;
+}
+
+.mobile .name,
+.mobile .score {
+  font-size: 16px;
+}
+
+.outOf {
+  opacity: 0.5;
+}

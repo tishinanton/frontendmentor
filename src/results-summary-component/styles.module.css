@@ -7,13 +7,25 @@
   font-family: Hanken Grotesk;
 }
 
-
-
-.desktopWrapper {
+.desktop {
   align-items: center;
   justify-content: center;
 }
 
-.mobileWrapper {
+.mobile {
   align-items: stretch;
+}
+
+.container {
+  display: flex;
+  background: #ffffff;
+}
+
+.desktop .container {
+  border-radius: 32px;
+}
+
+.mobile .container {
+  width: 100%;
+  flex-direction: column;
 }

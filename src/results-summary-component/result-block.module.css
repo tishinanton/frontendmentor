@@ -7,18 +7,18 @@
   align-items: center;
 }
 
-.blockMobile {
+.mobile {
   width: 100%;
   max-height: min-content;
+  border-radius: 0px 0px 32px 32px;
 }
 
-.blockDesktop {
+.desktop {
   width: 368px;
   border-radius: 32px;
 }
 
 .blockTitle {
-  font-size: 24px;
   font-weight: 700;
   line-height: 31px;
   letter-spacing: 0px;
@@ -26,8 +26,14 @@
   color: #cac9ff;
 }
 
-.blockDesktop .blockTitle {
+.desktop .blockTitle {
   margin-bottom: 35px;
+  font-size: 24px;
+}
+
+.mobile .blockTitle {
+  font-size: 18px;
+  margin-bottom: 24px;
 }
 
 .score {
@@ -36,32 +42,53 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-}
-
-.blockDesktop .score {
-  width: 200px;
-  height: 200px;
   background: linear-gradient(
     180deg,
     #4d21c9 0%,
     rgba(37, 33, 201, 0) 100%,
     rgba(37, 33, 201, 0) 100%
   );
+}
+
+.desktop .score {
+  width: 200px;
+  height: 200px;
   margin-bottom: 28px;
 }
 
-.blockDesktop .scoreFont {
+.mobile .score {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 24px;
+}
+
+.scoreFont {
   font-weight: 800;
-  font-size: 72px;
   color: #ffffff;
 }
 
-.blockDesktop .scoreOutOfFont {
+.desktop .scoreFont {
+  font-size: 72px;
+}
+
+.mobile .scoreFont {
+  font-size: 56px;
+}
+
+.scoreOutOfFont {
   font-weight: 700;
-  font-size: 18px;
+
   color: #cac9ff;
   mix-blend-mode: normal;
   opacity: 0.52;
+}
+
+.desktop .scoreOutOfFont {
+  font-size: 18px;
+}
+
+.mobile .scoreOutOfFont {
+  font-size: 16px;
 }
 
 .resultDescription {
@@ -70,16 +97,31 @@
   align-items: center;
 }
 
-.blockDesktop .resultDescription .performance {
+.performance {
   font-weight: 700;
-  font-size: 32px;
   color: #ffffff;
+}
+
+.desktop .performance {
+  font-size: 32px;
   margin-bottom: 14px;
 }
 
-.blockDesktop .resultDescription .description {
+.mobile .performance {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.description {
   font-weight: 500;
-  font-size: 18px;
   color: #cac9ff;
   text-align: center;
+}
+
+.desktop .description {
+  font-size: 18px;
+}
+
+.mobile .description {
+  font-size: 16px;
 }
