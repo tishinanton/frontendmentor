@@ -1,0 +1,54 @@
+.desktop,
+.mobile {
+}
+
+.description {
+  margin-bottom: 0 !important;
+  text-align: center;
+}
+
+.heading {
+  text-align: center;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  font-size: 0;
+}
+
+.desktop .image {
+  width: 340px;
+  margin-bottom: 32px;
+}
+
+.mobile .image {
+  margin-bottom: 24px;
+  width: 279px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #262e38;
+  border-radius: 22.5px;
+  font-family: "Overpass";
+  font-weight: 400;
+  text-align: center;
+  color: #fc7614;
+  align-self: center;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.desktop .score {
+  margin-bottom: 24px;
+  padding: 4px 20px;
+}
+
+.mobile .score {
+  margin-bottom: 29px;
+  padding: 5px 12px;
+}

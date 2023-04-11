@@ -1,19 +1,5 @@
-.form {
-  background: radial-gradient(
-    98.96% 98.96% at 50% 0%,
-    #232a34 0%,
-    #181e27 100%
-  );
-  border-radius: 30px;
-}
-
-.mobile {
-  padding: 24px 24px 32px 24px;
-}
-
+.mobile,
 .desktop {
-  padding: 32px;
-  max-width: min-content;
 }
 
 .scores {
@@ -22,8 +8,40 @@
 
 .mobile .scores {
   gap: 18px;
+  margin-bottom: 24px;
 }
 
 .desktop .scores {
   gap: 21px;
+  margin-bottom: 32px;
+}
+
+.desktop .star {
+  margin-bottom: 30px;
+}
+
+.mobile .star {
+  margin-bottom: 16px;
+}
+
+.button {
+  font-family: "Overpass";
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  background: #fc7614;
+  border-radius: 22.5px;
+  border: none;
+  text-align: center;
+  height: 45px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  background: #ffffff;
+  color: #fc7614;
 }

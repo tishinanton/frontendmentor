@@ -1,0 +1,55 @@
+.form {
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.desktop {
+  padding: 32px;
+  max-width: min-content;
+}
+
+.mobile {
+  padding: 24px 24px 32px 24px;
+}
+
+.heading {
+  font-family: "Overpass";
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.desktop .heading {
+  font-size: 28px;
+  line-height: 35px;
+  margin-bottom: 7px;
+}
+
+.mobile .heading {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-family: "Overpass";
+  font-weight: 400;
+  color: #969fad;
+  margin-bottom: 24px;
+}
+
+.desktop .description {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.mobile .description {
+  font-size: 14px;
+  line-height: 22px;
+}

@@ -2,6 +2,7 @@ import { useIsMobile } from "../../breakpoints.hook";
 import { RatingForm } from "./rating-form/rating-form";
 import styles from "./interactive-rating.module.css";
 import React, { useState } from "react";
+import { RatingConfirmation } from "./rating-confirmation/rating-confirmation";
 
 export const InteractiveRating = () => {
   const isMobile = useIsMobile();
@@ -14,13 +15,14 @@ export const InteractiveRating = () => {
 
   return (
     <div className={ratingClass}>
-      {score == undefined && (
+      {score === undefined && (
         <RatingForm
           onSubmit={(score) => {
             setScore(score);
           }}
         />
       )}
+      {score !== undefined && <RatingConfirmation score={score} />}
     </div>
   );
 };
