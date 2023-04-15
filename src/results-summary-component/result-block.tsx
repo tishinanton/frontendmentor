@@ -10,8 +10,6 @@ export const ResultBlock = () => {
     isMobile ? styles.mobile : styles.desktop,
   ];
 
-  const scoreClasses = [styles.score];
-
   return (
     <div className={blockClasses.join(" ")}>
       <div className={styles.blockTitle}>Your Result</div>

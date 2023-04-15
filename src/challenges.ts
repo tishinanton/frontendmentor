@@ -13,4 +13,8 @@ export const CHALLENGES: Challenge[] = [
     name: "Interactive rating component",
     url: "interactive-rating-component",
   },
+  {
+    name: "NFT Preview Card Component",
+    url: "nft-preview-card-component",
+  },
 ];
