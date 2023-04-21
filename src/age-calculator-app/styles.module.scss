@@ -1,0 +1,11 @@
+@use "../styles/reset";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+.wrapper {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F0F0;
+}

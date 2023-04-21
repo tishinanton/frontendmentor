@@ -18,6 +18,10 @@ export const CHALLENGES: Challenge[] = [
     url: "nft-preview-card-component",
   },
   {
+    name: "Age Calculator App",
+    url: "age-calculator-app"
+  },
+  {
     name: "Connect four game",
     url: "connect-four-game",
   },
