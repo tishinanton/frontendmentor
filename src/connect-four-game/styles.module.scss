@@ -1,0 +1,26 @@
+@use "./../styles/reset";
+@import "./shared";
+
+@include init;
+
+.wrapper {
+  font: var(--t-body);
+  background-color: var(--purple);
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+
+// Tablet
+@include tablet {
+  .wrapper {
+    background-color: var(--red);
+  }
+}
+
+// Mobile
+@include mobile {
+  .wrapper {
+    background-color: var(--yellow);
+  }
+}

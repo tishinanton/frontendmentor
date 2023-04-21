@@ -1,0 +1,87 @@
+@import "../../shared";
+
+.board {
+  display: flex;
+  position: relative;
+}
+
+.back,
+.pellets {
+  position: absolute;
+}
+
+.back {
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pellets {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  height: calc(100% - 20px);
+  top: 20px;
+  left: 20px;
+}
+
+.pelletsCol {
+  width: 88px;
+  z-index: 10;
+
+  &:first-of-type,
+  &:last-of-type {
+    width: 76px;
+  }
+}
+
+.front {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.indicator {
+  position: absolute;
+  top: -35px;
+  transition: all 200ms ease;
+}
+
+.activeColumn {
+  cursor: pointer;
+}
+
+.turnIndicator {
+  position: absolute;
+  bottom: -110px;
+  z-index: 4;
+  height: 110px;
+  width: 191px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    z-index: 0;
+  }
+
+  span {
+    z-index: 1;
+  }
+}
+
+@include tablet {
+  .indicator {
+    display: none;
+  }
+}
+
+@include mobile {
+  .indicator {
+    display: none;
+  }
+}

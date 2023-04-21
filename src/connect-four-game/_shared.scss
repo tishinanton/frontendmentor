@@ -1,0 +1,47 @@
+@mixin init {
+  @font-face {
+    font-family: GameFont;
+    src: url("./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
+        format("woff2 supports variations"),
+      url("./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
+        format("woff2-variations");
+    font-weight: 100 1000;
+  }
+
+  :root {
+    --dark-purple: #5c2dd5;
+    --purple: #7945ff;
+    --black: #000000;
+    --red: #fd6687;
+    --yellow: #ffce67;
+    --white: #ffffff;
+
+    --t-heading-l: 700 56px/71px GameFont;
+    --t-heading-m: 700 24px/31px GameFont;
+    --t-heading-s: 700 20px/26px GameFont;
+    --t-heading-xs: 700 16px/21px GameFont;
+    --t-body: 500 16px/21px GameFont;
+
+    --test-bg: rgba(0, 0, 0, 0.5);
+  }
+
+  @content;
+}
+
+@mixin mobile() {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media screen and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin testDiv {
+  background-color: var(--test-bg);
+  min-width: 200px;
+  min-height: 100px;
+}

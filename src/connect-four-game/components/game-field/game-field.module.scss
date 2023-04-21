@@ -1,0 +1,106 @@
+@import "./../../shared";
+
+.gameField,
+.controls,
+.p1Score,
+.p2Score,
+.turnLabel {
+  // @include testDiv;
+}
+
+.gameField {
+  display: grid;
+  flex: 1 1 0;
+  grid-template-areas:
+    "spaceLeft controls spaceRight"
+    "p1Score board p2Score"
+    "turnLabel turnLabel turnLabel";
+  grid-template-columns: 1fr 632px 1fr;
+  grid-template-rows: min-content 584px 1fr;
+}
+
+.controls {
+  grid-area: controls;
+}
+
+.p1Score,
+.p2Score {
+  display: flex;
+  align-items: center;
+}
+
+.p1Score {
+  grid-area: p1Score;
+  padding-right: 60px;
+  justify-content: end;
+}
+
+.p2Score {
+  grid-area: p2Score;
+  padding-left: 60px;
+}
+
+.board {
+  grid-area: board;
+  z-index: 2;
+}
+
+.turnLabel {
+  grid-area: turnLabel;
+  display: flex;
+  z-index: 1;
+}
+
+@include tablet {
+  .gameField {
+    grid-template-areas:
+      "spaceLeft controls controls spaceRight"
+      "spaceLeft p1Score p2Score spaceRight"
+      "spaceLeft board board spaceRight"
+      "turnLabel turnLabel turnLabel turnLabel";
+    grid-template-columns: 1fr 316px 316px 1fr;
+    grid-template-rows: min-content min-content 584px 1fr;
+  }
+
+  .p1Score,
+  .p2Score {
+    margin-bottom: 32px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .p1Score {
+    padding-right: 20px;
+  }
+
+  .p2Score {
+    padding-left: 20px;
+  }
+}
+
+@include mobile {
+  .gameField {
+    grid-template-areas:
+      "spaceLeft controls controls spaceRight"
+      "spaceLeft p1Score p2Score spaceRight"
+      "spaceLeft board board spaceRight"
+      "turnLabel turnLabel turnLabel turnLabel";
+    grid-template-columns: 1fr 167.5px 167.5px 1fr;
+    grid-template-rows: min-content min-content 310px 1fr;
+  }
+
+  .p1Score,
+  .p2Score {
+    margin-bottom: 50px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .p1Score {
+    padding-right: 10px;
+  }
+
+  .p2Score {
+    padding-left: 10px;
+  }
+}

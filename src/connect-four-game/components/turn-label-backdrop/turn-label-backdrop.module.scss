@@ -1,0 +1,32 @@
+@import "./../../shared";
+
+.turnLabelBackdrop {
+  flex: 1 1 0;
+  position: relative;
+  display: flex;
+}
+
+.backdrop {
+  --backdrop-border-radius: 60px;
+  position: absolute;
+  width: 100%;
+  top: -40px;
+  height: calc(100% + 40px);
+  background-color: var(--dark-purple);
+  border-top-right-radius: var(--backdrop-border-radius);
+  border-top-left-radius: var(--backdrop-border-radius);
+
+  &[data-color="red"] {
+    background-color: var(--red);
+  }
+
+  &[data-color="yellow"] {
+    background-color: var(--yellow);
+  }
+}
+
+@include mobile {
+  .backdrop {
+    top: -10px;
+  }
+}

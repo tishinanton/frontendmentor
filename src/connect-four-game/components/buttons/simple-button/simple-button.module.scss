@@ -1,0 +1,19 @@
+@import "./../../../shared";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: none;
+  background: var(--dark-purple);
+  border-radius: 20px;
+  color: var(--white);
+  text-transform: uppercase;
+  font: var(--t-heading-xs);
+
+  &:hover {
+    background-color: var(--red);
+    cursor: pointer;
+  }
+}

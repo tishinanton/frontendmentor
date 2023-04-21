@@ -1,0 +1,16 @@
+@import "./../../shared";
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.buttonWrapper {
+  width: 200px;
+  display: flex;
+  &:last-child {
+    justify-content: flex-end;
+  }
+}

@@ -17,4 +17,8 @@ export const CHALLENGES: Challenge[] = [
     name: "NFT Preview Card Component",
     url: "nft-preview-card-component",
   },
+  {
+    name: "Connect four game",
+    url: "connect-four-game",
+  },
 ];

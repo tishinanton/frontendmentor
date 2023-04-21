@@ -67,13 +67,14 @@
     background: var(--image-hover-background);
   }
 }
+.wrapper {
+  a {
+    color: var(--link-foreground);
+    text-decoration: none;
 
-a {
-  color: var(--link-foreground);
-  text-decoration: none;
-
-  &:hover {
-    color: var(--link-hover-foreground);
+    &:hover {
+      color: var(--link-hover-foreground);
+    }
   }
 }
 
