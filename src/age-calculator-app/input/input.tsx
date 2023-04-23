@@ -7,25 +7,31 @@ export type InputProps = {
   maxLength?: number;
   onChange?: (value?: number) => void;
   errorMessage?: string;
+  validator?: (value?: number) => string | undefined;
 };
 
 let InputId = 0;
 
 export const Input = (props: InputProps) => {
-  const { label, value, onChange, maxLength, errorMessage } = props;
+  const { label, value, onChange, maxLength, validator } = props;
 
   const [inputId, setInputId] = useState<string | undefined>();
   const [inputValue, setInputValue] = useState<number | string | undefined>(
     value ?? ""
   );
+  const [error, setError] = useState<string | undefined>();
+  const [dirty, setDirty] = useState<boolean>(false);
 
   useEffect(() => {
     setInputId(`input-${InputId++}`);
   }, []);
 
-  function onChangeHandler({
+  const onChangeHandler = ({
     target: { value },
-  }: React.ChangeEvent<HTMLInputElement>): void {
+  }: React.ChangeEvent<HTMLInputElement>): void => {
+    if (!dirty) {
+      setDirty(true);
+    }
     if (!!maxLength && value.length > maxLength) {
       return;
     }
@@ -37,25 +43,31 @@ export const Input = (props: InputProps) => {
       return;
     }
     setInputValue(value);
-  }
+  };
 
   useEffect(() => {
     setInputValue(value ?? "");
   }, [value]);
 
   useEffect(() => {
-    onChange &&
-      onChange(
-        inputValue === ""
-          ? undefined
-          : inputValue === undefined
-          ? inputValue
-          : +inputValue
-      );
-  }, [inputValue, onChange]);
+    const updatedValue =
+      inputValue === ""
+        ? undefined
+        : inputValue === undefined
+        ? inputValue
+        : +inputValue;
+    if (validator !== undefined && dirty) {
+      setError(validator(updatedValue));
+    }
+    onChange && onChange(updatedValue);
+  }, [inputValue, onChange, dirty, validator]);
 
   return (
-    <div className={styles.inputWrapper}>
+    <div
+      className={[styles.inputWrapper, error != null && styles.hasError].join(
+        " "
+      )}
+    >
       {!!label && (
         <label htmlFor={inputId} className={styles.label}>
           {label}
@@ -66,8 +78,12 @@ export const Input = (props: InputProps) => {
         className={styles.input}
         value={inputValue}
         onChange={(e) => onChangeHandler(e)}
+        onBlur={() => {
+          console.log("focused");
+          setDirty(true);
+        }}
       />
-      {!!errorMessage && <div className={styles.error}>{errorMessage}</div>}
+      {!!error && <div className={styles.error}>{error}</div>}
     </div>
   );
 };

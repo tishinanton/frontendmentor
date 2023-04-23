@@ -1,15 +1,105 @@
+@import "./../../styles/shared";
+
 .calc {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   background: #ffffff;
   border-radius: 24px 24px 200px 24px;
-
   padding: 56px;
+  max-width: 100%;
 }
 
 .controls {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 1px;
+  background: #dcdcdc;
+  margin-top: 68.5px;
+  margin-bottom: 47.5px;
+  position: relative;
+  width: 728px;
+  max-width: 100%;
+
+  .image {
+    width: 96px;
+    height: 96px;
+    right: 0;
+    background: #854dff;
+    border-radius: 216px;
+    position: absolute;
     display: flex;
-    align-items: flex-start;
-    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    top: -47.5px;
+  }
+}
+
+.calculations {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 800;
+  font-size: 104px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #151515;
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    .result {
+      color: #854dff;
+    }
+  }
+}
+
+@include mobile {
+  .calc {
+    padding: 48px 24px;
+    border-radius: 24px 24px 100px 24px;
+    margin: 16px;
+  }
+
+  .controls {
+    gap: 16px;
+  }
+
+  .calculations {
+    font-size: 56px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+
+  .divider {
+    width: 100%;
+    margin: 63.5px 0;
+
+    .image {
+      width: 64px;
+      height: 64px;
+      top: -32.5px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      img {
+        width: 24px;
+      }
+    }
+  }
 }
